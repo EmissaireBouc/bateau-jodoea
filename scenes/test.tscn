@@ -2,10 +2,18 @@
 
 [ext_resource path="res://tiles/tileset01.tres" type="TileSet" id=1]
 [ext_resource path="res://scripts/mouvement_joueur.gd" type="Script" id=2]
+<<<<<<< HEAD
 [ext_resource path="res://images/ajoueur-sheet0.png" type="Texture" id=3]
+=======
+[ext_resource path="res://tiles/tileset01.tres" type="TileSet" id=3]
+[ext_resource path="res://mouvement_pnj.gd" type="Script" id=4]
+>>>>>>> 4648249b652364834d1e9298c7875159902c0217
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 12.4653, 12.8408 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -33,3 +41,18 @@ texture = ExtResource( 3 )
 offset = Vector2( 16, 16 )
 region_enabled = true
 region_rect = Rect2( 160, 0, 32, 32 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 288, 144 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 32, 32, 32 )
