@@ -32,4 +32,4 @@ shape = SubResource( 1 )
 texture = ExtResource( 3 )
 offset = Vector2( 16, 16 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 32, 32 )
+region_rect = Rect2( 160, 0, 32, 32 )
