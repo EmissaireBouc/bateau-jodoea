@@ -5,7 +5,9 @@ const UP = Vector2(0,-1)
 const ACCEL = 5
 
 var vel = Vector2()
+
 export (int) var max_speed = 200
+export (int) var max_jump = 500
 
 func _ready():
 	pass # Replace with function body.
@@ -37,6 +39,6 @@ func movement_loop():
 	var jump = Input.is_action_just_pressed("ui_accept")
 	
 	if jump == true and is_on_floor():
-		vel.y = -700
+		vel.y = max_jump
 	
 	
