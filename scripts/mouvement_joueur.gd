@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 const GRAVITY = 1000
 const UP = Vector2(0,-1)
-const ACCEL = 5
+const ACCEL = 4
 
 var vel = Vector2()
 export (int) var max_speed = 200
