@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 const GRAVITY = 1000
 const UP = Vector2(0,-1)
-const ACCEL = 4
+const ACCEL = 10
 
 var vel = Vector2()
 
